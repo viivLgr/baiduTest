@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html</title>
+	<style type="text/css">
+		html,body,h1,h2,dl,dd,dt,table,tr,th,td{margin:0; padding:0; }
+dl,dd,dt{list-style: none;}
+.clearfix{overflow: auto;zoom:1;}
+body{font-size: 14px;font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";}
+header{width: 100%; background: #333; }
+.header{ width: 1200px; margin:0 auto;overflow: hidden; padding: 10px 0;}
+.header h1{float: left; width: 117px; height: 38px;}
+.header ul{ float: right; }
+.header ul li{ float: left; width: 80px;}
+.header ul li a{color: #fff;}
+.container-wrap{background: #eee; padding: 20px; position: relative;}
+.container-wrap section{float: left; }
+.container-wrap .left-section{ width: 100%; padding-right: 420px; box-sizing: border-box; }
+.container{ margin: 0 auto 20px; background: #fff; padding: 40px 20px; border: 1px solid #ddd;}
+.container h3{color: #666;}
+.container a{color: blue;}
+.container .author{color: #666;}
+.container .content{ text-indent: 20px; line-height: 24px;}
+.container02 ul li{list-style: none;}
+.container03 dl{border: 1px solid #ddd; width: 250px; text-align: center; margin-left: 40px; margin-bottom: 20px; float: left;}
+.container03 dt{line-height: 40px;}
+.container03 dd{padding-bottom: 20px;}
+.container04 table{border:1px solid #ddd; text-align: left;border-collapse:collapse;
+ border-spacing:0; width:100%;}
+.container04 table th{ background: #333;color: #fff; }
+.container04 table td{border: 1px solid #ddd;}
+.container04 table .col1{width: 40%;}
+.container04 table .col2{width: 20%;}
+.container04 table .footer{background: #eee; font-weight: bold;}
+.container04 table .footer td{border: none;}
+.right-section{ position: absolute;right: 20px; top: 20px; width: 400px;}
+.right-section .container{ padding:20px; }
+.right-section h2{ border-left: 4px solid #ddd; padding-left: 20px; line-height: 40px; font-size: 18px; margin-bottom: 10px;}
+.right-section p{padding:0; margin: 0;}
+.right-section .form{width: 100%;}
+.right-section .form .item{ width: 100%; overflow: hidden; margin-bottom:20px;}
+.right-section .item-left{float: left; width: 30%; text-align:right;}
+.right-section .item-right{float: left; margin-left: 2%; width: 68%;}
+.right-section .item-right .error{color: #666; padding: 10px 0;}
+.right-section .item-right textarea{ width: 90%; font-size: 16px; font-weight: bold; }
+.right-section .item-right textarea::-webkit-input-placeholder{color:#333;}
+.submit{width: 100%; background: blue; border-radius: 10px; color: #fff; border: none; line-height: 40px; font-size: 16px;}
+footer{ width: 100%; line-height: 40px; text-align: center; background: #000; color: #fff; }
+	</style>
+</head>
+<body>
+<header>
+	<div class="header">
+		<h1><img src="baidu_logo.png"></h1>
+		<ul>
+			<li><a href="">导航链接1</a></li>
+			<li><a href="">导航链接2</a></li>
+			<li><a href="">导航链接3</a></li>
+			<li><a href="">导航链接4</a></li>
+		</ul>
+	</div>
+</header>
+<div class="container-wrap clearfix">
+	<section class="left-section">
+		<div class="container">
+			<h2>文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p class="author">文章作者&nbsp; 文章发表时间</p>
+			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img src="task01.png" width="200" height="200" />
+			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.<br>
+			</p>
+		</div>
+		<div class="container container02">
+			<h2>另一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p class="author">文章作者&nbsp; 文章发表时间</p>
+			<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.</p>
+			<img src="task01.png" width="200" height="200" />
+			<ul>
+				<li>列表项目一</li>
+				<li>列表项目二</li>
+				<li>列表项目三</li>
+			</ul>
+		</div>
+		<div class="container container03 clearfix">
+			<h2>图片</h2>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+			<dl>
+				<dt>好看的图片</dt>
+				<dd><img src="task01.png" width="200" height="200" /></dd>
+			</dl>
+		</div>
+		<div class="container container04">
+			<h2>最后一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p class="author">文章作者&nbsp; 文章发表时间</p>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+			<p>下面是一个表格，给表格加一个border=1好让你看出是表格</p>
+			<table>
+				<tr>
+					<th class="col1">表头</th>
+					<th class="col1">表头</th>
+					<th class="col2">表头</th>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="">操作</a></td>
+				</tr>
+				<tr class="footer">
+					<td>总计</td>
+					<td colspan="2">1000</td>
+				</tr>
+			</table>
+		</div>
+	</section>
+	<section class="right-section">
+		<div class="container">
+			<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+			<div class="form">
+				<div class="item">
+					<div class="item-left">请输入邮箱地址</div>
+					<div class="item-right">
+						<input type="text" name="email" placeholder="这是一个文本输入框">
+						<p class="error">邮箱地址请按要求格式输入</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">请输入密码</div>
+					<div class="item-right">
+						<input type="password" name="password" placeholder="这是一个文本输入框">
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">请重复输入密码</div>
+					<div class="item-right">
+						<input type="password" name="password2" placeholder="这是一个文本输入框">
+						<p class="error">密码请为6-16位英文数字</p>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">性别：</div>
+					<div class="item-right">
+						<label><input type="radio" name="sex" value="male" checked>男 </label>
+						<label><input type="radio" name="sex" value="female">女 </label>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">城市：</div>
+					<div class="item-right">
+						<select name="city">
+							<option value="shanghai">上海</option>
+							<option value="beijing" selected>北京</option>
+							<option value="hangzhou">杭州</option>
+						</select>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">爱好：</div>
+					<div class="item-right">
+						<label><input type="checkbox" name="likes" value="art" checked>艺术</label>
+				 		<label><input type="checkbox" name="likes" value="sports">运动</label>
+				 		<label><input type="checkbox" name="likes" value="science">科学</label>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-left">个人描述：</div>
+					<div class="item-right">
+						<textarea name="descript" rows="5" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+					</div>
+				</div>
+				<div>
+				<button type="submit" class="submit">确认提交</button> 
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<footer>版权所有&copy;</footer>
+</body>
+</html>
