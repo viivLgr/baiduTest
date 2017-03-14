@@ -1,0 +1,39 @@
+html,body,h1,h2,dl,dd,dt,table,tr,th,td{margin:0; padding:0; }
+dl,dd,dt{list-style: none;}
+body{font-size: 14px;font-family: Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei";}
+header{width: 100%; background: #333; }
+.header{ width: 1200px; margin:0 auto;overflow: hidden; padding: 10px 0;}
+.header h1{float: left; width: 117px; height: 38px;}
+.header ul{ float: right; }
+.header ul li{ float: left; width: 80px;}
+.header ul li a{color: #fff;}
+section{ background: #eee; padding: 20px 0;}
+.container{width: 1200px;margin: 0 auto 20px; background: #fff; padding: 40px 20px; border: 1px solid #ddd;}
+.container h3{color: #666;}
+.container a{color: blue;}
+.container .author{color: #666;}
+.container .content{ text-indent: 20px; line-height: 24px;}
+.container02 ul li{list-style: none;}
+.container03 dl{border: 1px solid #ddd; width: 250px; text-align: center; margin-left: 40px; margin-bottom: 20px;}
+.container03 dt{line-height: 40px;}
+.container03 dd{padding-bottom: 20px;}
+.container04 table{border:1px solid #ddd; text-align: left;border-collapse:collapse;
+ border-spacing:0; width:100%;}
+.container04 table th{ background: #333;color: #fff; }
+.container04 table td{border: 1px solid #ddd;}
+.container04 table .col1{width: 40%;}
+.container04 table .col2{width: 20%;}
+.container04 table .footer{background: #eee; font-weight: bold;}
+.container04 table .footer td{border: none;}
+.right-section .container{ padding:20px; }
+.right-section h2{ border-left: 4px solid #ddd; padding-left: 20px; line-height: 40px}
+.right-section p{padding:0; margin: 0;}
+.right-section .form{width: 100%;}
+.right-section .form .item{ width: 100%; overflow: hidden; margin-bottom:20px;}
+.right-section .item-left{float: left; width: 30%; text-align:right;}
+.right-section .item-right{float: left; margin-left: 2%; width: 68%;}
+.right-section .item-right .error{color: #666; padding: 10px 0;}
+.right-section .item-right textarea{ width: 90%; font-size: 16px; font-weight: bold; }
+.right-section .item-right textarea::-webkit-input-placeholder{color:#333;}
+.submit{width: 100%; background: blue; border-radius: 10px; color: #fff; border: none; line-height: 40px; font-size: 16px;}
+footer{ width: 100%; line-height: 40px; text-align: center; background: #000; color: #fff; }

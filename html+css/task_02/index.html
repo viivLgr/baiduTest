@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>html</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+<header>
+	<div class="header">
+		<h1><img src="baidu_logo.png"></h1>
+		<ul>
+			<li><a href="">导航链接1</a></li>
+			<li><a href="">导航链接2</a></li>
+			<li><a href="">导航链接3</a></li>
+			<li><a href="">导航链接4</a></li>
+		</ul>
+	</div>
+</header>
+<section>
+	<div class="container">
+		<h2>文章一级标题</h2>
+		<h3>文章二级标题</h3>
+		<p class="author">文章作者&nbsp; 文章发表时间</p>
+		<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.</p>
+		<img src="task01.png" width="200" height="200" />
+		<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.<br>
+		</p>
+	</div>
+	<div class="container container02">
+		<h2>另一篇文章一级标题</h2>
+		<h3>文章二级标题</h3>
+		<p class="author">文章作者&nbsp; 文章发表时间</p>
+		<p class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 换行了<br>
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu <a href="http://www.baidu.com">这里有一个链接到www.baidu.com</a> fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in  culpa qui officia deserunt mollit anim id est laborum.</p>
+		<img src="task01.png" width="200" height="200" />
+		<ul>
+			<li>列表项目一</li>
+			<li>列表项目二</li>
+			<li>列表项目三</li>
+		</ul>
+	</div>
+	<div class="container container03">
+		<h2>图片</h2>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+		<dl>
+			<dt>好看的图片</dt>
+			<dd><img src="task01.png" width="200" height="200" /></dd>
+		</dl>
+	</div>
+	<div class="container container04">
+		<h2>最后一篇文章一级标题</h2>
+		<h3>文章二级标题</h3>
+		<p class="author">文章作者&nbsp; 文章发表时间</p>
+		<ol>
+			<li>排名1</li>
+			<li>排名2</li>
+			<li>排名3</li>
+		</ol>
+		<p>下面是一个表格，给表格加一个border=1好让你看出是表格</p>
+		<table>
+			<tr>
+				<th class="col1">表头</th>
+				<th class="col1">表头</th>
+				<th class="col2">表头</th>
+			</tr>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="">操作</a></td>
+			</tr>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="">操作</a></td>
+			</tr>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="">操作</a></td>
+			</tr>
+			<tr>
+				<td>表内容单元格</td>
+				<td>表内容单元格</td>
+				<td><a href="">操作</a></td>
+			</tr>
+			<tr class="footer">
+				<td>总计</td>
+				<td colspan="2">1000</td>
+			</tr>
+		</table>
+	</div>
+</section>
+<section class="right-section">
+	<div class="container">
+		<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+		<div class="form">
+			<div class="item">
+				<div class="item-left">请输入邮箱地址</div>
+				<div class="item-right">
+					<input type="text" name="email" placeholder="这是一个文本输入框">
+					<p class="error">邮箱地址请按要求格式输入</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">请输入密码</div>
+				<div class="item-right">
+					<input type="password" name="password" placeholder="这是一个文本输入框">
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">请重复输入密码</div>
+				<div class="item-right">
+					<input type="password" name="password2" placeholder="这是一个文本输入框">
+					<p class="error">密码请为6-16位英文数字</p>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">性别：</div>
+				<div class="item-right">
+					<label><input type="radio" name="sex" value="male" checked>男 </label>
+					<label><input type="radio" name="sex" value="female">女 </label>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">城市：</div>
+				<div class="item-right">
+					<select name="city">
+						<option value="shanghai">上海</option>
+						<option value="beijing" selected>北京</option>
+						<option value="hangzhou">杭州</option>
+					</select>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">爱好：</div>
+				<div class="item-right">
+					<label><input type="checkbox" name="likes" value="art" checked>艺术</label>
+			 		<label><input type="checkbox" name="likes" value="sports">运动</label>
+			 		<label><input type="checkbox" name="likes" value="science">科学</label>
+				</div>
+			</div>
+			<div class="item">
+				<div class="item-left">个人描述：</div>
+				<div class="item-right">
+					<textarea name="descript" rows="5" placeholder="这是一个多行输入框，输入您的个人描述"></textarea>
+				</div>
+			</div>
+			<div>
+			<button type="submit" class="submit">确认提交</button> 
+			</div>
+		</div>
+	</div>
+</section>
+<footer>版权所有&copy;</footer>
+</body>
+</html>
