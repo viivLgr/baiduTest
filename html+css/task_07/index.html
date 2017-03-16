@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task07</title>
+	<style type="text/css">
+		html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dd,dt,input,button,textarea{margin: 0; padding: 0;}
+		h1,h2,h3,h4,h5,h6{font-weight: normal;}
+		body{font-size: 14px; font-family:  Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"; }
+		ul,li,dl,dt,dd{list-style: none;}
+		input,button,textarea{border: none;}
+		input,button,select,textarea{outline:none}
+		img{ width: 100%; display: block;}
+		.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+		.clearfix{*+height:1%;}
+		.dis{ display: none; }
+		header{width: 1160px; margin: 0 auto;}
+		header h1{float: left; padding: 10px 0;}
+		header h1 img{ width: 30px;height: 30px; float: left; }
+		header h1 span{ float: left;line-height: 30px; font-size: 20px; margin-left: 10px;  color: #393a3a;}
+		header .nav{ float: right; }
+		header .nav li{ float: left; }
+		header .nav li a{ display: inline-block; padding:15px 20px 20px; color: #787b83; font-size: 14px; text-decoration: none;}
+		header .nav li.active a{ color: #e74f4d; border-bottom: 3px solid #e74f4d; }
+		header .nav li a:hover { color: #e74f4d; border-bottom: 3px solid #e74f4d; }
+		header .login{float: right; padding: 18px 20px;}
+		header .login img{float: left; width: 14px; height: 16px;}
+		header .login span{display: inline-block; line-height: 16px; color: #e74f4d; font-size: 14px; margin-left: 5px;}
+		.banner-wrap{ width: 100%; min-width: 1160px; position: relative;}
+		.banner-wrap img{ width: 100%; }
+		.banner-wrap .info{ position: absolute; left: 0;top: 0; bottom: 0;right: 0; margin: auto; width: 480px; height: 260px; margin-left: 10%;}
+		.banner-wrap .info h2{ font-size: 60px; color: #fff; }
+		.banner-wrap .info p{ color: #fffdfd; font-size: 20px;line-height: 32px; margin-top: 30px; font-family: "Microsoft YaHei";}
+		.banner-wrap .info a{ display: inline-block; line-height: 63px; margin-top: 65px; padding: 0 100px;background: #e7504d; color: #fff; font-size: 30px; text-decoration: none; }
+		.category-wrap{ width: 100%;min-width: 1160px;}
+		.category-wrap dl{ width: 25%;float: left; text-align: center; padding: 45px 0;}
+		.category-wrap dl dt{ width: 100%;padding-bottom: 40px; }
+		.category-wrap dl dt img{ width: 42px; height: 41px; margin: 0 auto;}
+		.category-wrap dl dd{ width: 100%; padding: 0 100px; color: #767777;  box-sizing: border-box; border-right: 2px solid #767777;}
+		.category-wrap dl:last-child dd{ border-right: 0; }
+		.about-wrap{ width: 100%;min-width: 1160px; background: #ededed; text-align: center; font-size: 55px; color: #323333; padding: 87px 0 77px;}
+		.about-wrap img{ width: 91px; height: 92px; margin: 0 auto;}
+		.about-wrap p{opacity: 0.5; margin-top: 40px;}
+		.search-wrap{ width: 100%;min-width: 1160px; position: relative;}
+		.search-wrap img{ width: 100%; }
+		.search-wrap .search-mask{ position: absolute;left: 0; top: 0; width: 100%; height: 100%; background: rgba(170,50,50,0.2); }
+		.search-wrap .search-mask .search-form{ width: 1160px; margin: 0 auto; }
+		.search-wrap .search-mask .search-form h2{ font-size: 20px; color: #fff; text-align: center;  margin-top: 50px; position: relative;}
+		.search-wrap .search-mask .search-form h2:after{ content: '';position: absolute; left: 0; right: 0; top:0; bottom: 0; margin: auto; width: 30px; height: 3px; background: #fff; margin-top: 40px;}
+		.search-wrap .search-mask .search-form p{ font-size: 12px; text-align: center; color: #fff; padding: 30px 0 50px; }
+		.search-wrap .search-mask .search-form .form{ width: 1028px; margin: 0 auto; }
+		.search-wrap .search-mask .search-form .form-item{ position: relative; float: left; width: 236px; margin: 0 14px; z-index: 10;}
+		.search-wrap .search-mask .search-form .form-item:first-child{margin-left: 0;}
+		.search-wrap .search-mask .search-form .form-item:last-child{margin-right: 0;}
+		.search-wrap .search-mask .search-form .form-item input{ width: 100%; line-height: 34px; padding:0 10px; box-sizing: border-box; position: relative;}
+		.search-wrap .search-mask .search-form .form-item input:focus{border: 1px solid #be4e48; box-sizing: border-box;}
+		.search-wrap .search-mask .search-form .form-item:after{ content: ''; position: absolute;right: 10px; top: 8px; width: 19px; height: 18px; background: url('images/select.png') no-repeat;}
+		.search-wrap .search-mask .search-form .form-item:last-child:after{ display: none; }
+		.search-wrap .search-mask .search-form .form-item .items{ width: 100%;  background: #e3e3e4; padding-bottom: 20px; border: 1px solid #be4e48; box-sizing: border-box;}
+		.search-wrap .search-mask .search-form .form-item .items li{ line-height: 36px; color: #323333; font-size: 12px; }
+		.search-wrap .search-mask .search-form .form-item .items li .selected-img{ background: #e3e3e4; display: inline-block; margin: 0 10px; width: 12px; height: 9px; }
+		.search-wrap .search-mask .search-form .form-item .items li.selected{ background: #be4e48; color: #fff; }
+		.search-wrap .search-mask .search-form .form-item .items li.selected .selected-img{ background: url('images/selected.png') no-repeat; }
+		.search-wrap .search-mask .search-form .form-item .items li:hover{ background: #be4e48; color: #fff; }
+		.search-wrap .search-mask .search-form .form-item .items li:hover .selected-img{ background: url('images/selected.png') no-repeat; }
+		.search-wrap .search-mask .search-form .form-item .search-btn{ width: 100%; text-align: center; font-size: 14px; letter-spacing: 20px; color: #fff; background: #be4e48; line-height: 34px;}
+		.active-wrap{ width: 100%;min-width: 1160px; background: #f7f7f7; padding: 100px 0 116px; }
+		.active-wrap .active-items{ width: 1192px; margin: 0 auto; }
+		.active-wrap .active-items .item{ float: left; width: 25%; box-sizing: border-box; padding: 0 18px; text-align: center; }
+		.active-wrap .active-items .item:hover dt .img-wrap{top: 60px;}
+		.active-wrap .active-items .item.active dt .img-wrap{top: 60px;}
+		.active-wrap .active-items .item dt{position: relative; width: 100%; height: 400px;}
+		.active-wrap .active-items .item dt .img-wrap{width: 100%; box-sizing: border-box; border: 1px solid #dadada; padding: 8px;background: #fff; position: absolute; left: 0; top: 0;}
+		.active-wrap .active-items .item dt .title h3{ letter-spacing: 38px; text-indent: 28px; font-size: 20px; }
+		.active-wrap .active-items .item dt .title p{ font-size: 12px; color: #818181; margin-top: 5px;}
+		.active-wrap .active-items .item dd h3{ line-height: 38px; font-size: 14px; color:#323333; }
+		.active-wrap .active-items .item dd p{ font-size: 12px; color: #818181; }
+		.new-world-wrap{ width: 100%; min-width: 1160px; display: table;}
+		.new-world-wrap .img-wrap{display: table-cell; width: 66.66%;}	
+		.new-world-wrap .img-wrap .img-item{ position: relative; }
+		.new-world-wrap .img-wrap .img-item:after{ content: ''; display: inline-block; position: absolute; top: 50%;right: 0; margin-top: -15px; border-right: 25px solid #fff; border-top: 15px solid transparent;  border-bottom: 15px solid transparent;}	
+		.new-world-wrap .img-wrap .img-item .img-mask{ position: absolute; left: 50%;top: 50%; color: #fff;margin-left: -185px; margin-top: -178px; width: 370px; height: 356px; text-align: center;font-family: "Microsoft YaHei";}
+		.new-world-wrap .img-wrap .img-item .img-mask h2{ font-size: 50px; }
+		.new-world-wrap .img-wrap .img-item .img-mask h3{ font-size: 156px; }
+		.new-world-wrap .img-wrap .img-item .img-mask p{ font-size: 22px; line-height: 42px;}
+		.new-world-wrap .txt-wrap{display: table-cell; width: 33.33%; text-align: center; box-sizing: border-box;vertical-align: middle; position: relative; padding: 0 100px;}
+		.new-world-wrap .txt-wrap ul{ width: 100%; }
+		.new-world-wrap .txt-wrap ul h2{ font-size: 20px; color: #323333; }	
+		.new-world-wrap .txt-wrap ul h2 i{ display: inline-block; width: 24px; border-bottom: 1px solid #7f8080; transform: rotateZ(-45deg) translate3d(3px,-6px,0); }
+		.new-world-wrap .txt-wrap ul h2 span{ color: #e74f4d; margin-left: -4px; font-size: 22px; }
+		.new-world-wrap .txt-wrap ul p{ color: #aaaaaa; font-size: 12px; line-height: 30px; text-align: left; font-family: 'Songti'; margin-top: 20px;}
+		.new-world-wrap .txt-wrap ul .check-more{ display: inline-block; padding: 9px 28px; border: 1px solid #e74f4d; color: #e74f4d; text-decoration: none;margin-top: 40px; }
+		.new-world-wrap .txt-wrap .menu{ width: 80px; margin: 25px auto; }
+		.new-world-wrap .txt-wrap .menu li{ float: left; width: 10px; height: 10px; border-radius: 50px; border: 1px solid #929293; margin: 0 7px; }
+		.new-world-wrap .txt-wrap .menu li.active{ background: #929293; }
+		.new-world-wrap2{ display: table; width: 100%; }
+		.new-world-wrap2 li{display: table-cell; width: 33.33%; vertical-align: middle; text-align: center;position: relative;}
+		.new-world-wrap2 li:first-child{background: #e74f4d; color: #fff; }
+		.new-world-wrap2 li:last-child{ padding: 0; }
+		.new-world-wrap2 li h2{ font-size: 21px; line-height: 30px; position: relative;}
+		.new-world-wrap2 li h2:after{ content: ''; width: 40px; height: 2px;background: #aaaaaa;  position: absolute; bottom: -20px; left: 50%; margin-left: -20px;}
+		.new-world-wrap2 li:first-child h2:after{ background: #fff;}
+		.new-world-wrap2 li .see-more{ display: inline-block; padding: 10px 40px; color: #e74f4d; border:1px solid #e74f4d; margin-top: 40px; font-size: 20px; text-decoration: none;}
+		.new-world-wrap2 li:first-child .see-more{ color: #fff; border:1px solid #fff;}
+		.new-world-wrap2 li:last-child:after{ position: absolute;content: ''; border-left: 25px solid #fff; border-top: 15px solid transparent; border-bottom: 15px solid transparent; top: 50%; left: 0; margin-top: -15px; }
+		.volunteer-wrap{ width: 1000px; min-width: 1160px;margin: 0 auto;padding-bottom: 170px;}
+		.volunteer-wrap .volunteer-title{ text-align: center; padding: 100px 0;}
+		.volunteer-wrap .volunteer-title h2{color: #323333; font-size: 20px; position: relative;}
+		.volunteer-wrap .volunteer-title h2:after{content: '';position: absolute; width: 50px; height: 2px; background: #e74f4d; left: 50%; margin-left: -25px; top: 40px;}
+		.volunteer-wrap .volunteer-title p{ padding-top: 40px; line-height: 18px; font-size: 12px; color: #aaaaaa; }
+		.volunteer-wrap .volunteer-info .volunteer-intro{ float: left; width: 290px; margin-right: 73px; }
+		.volunteer-wrap .volunteer-info .volunteer-intro li{ padding-bottom: 38px;}
+		.volunteer-wrap .volunteer-info .volunteer-intro li:last-child{ padding-bottom: 0;}
+		.volunteer-wrap .volunteer-info .volunteer-intro h3{ font-size: 14px; color: #231815; }
+		.volunteer-wrap .volunteer-info .volunteer-intro p{ font-size: 12px;opacity: 0.6; line-height: 21px; padding-top: 20px;}
+		.volunteer-wrap .volunteer-info .volunteer-intro .see-more{ float: right; text-decoration: none; font-size: 12px; line-height: 21px; position: relative; opacity: 0.6; color: #231815;font-family: 'Songti';}
+		.volunteer-wrap .volunteer-info .volunteer-intro .see-more:after{ content: ''; position: absolute; left: -15px; top: 8px; width: 10px; height: 7px; background: url('images/seemore.png') no-repeat;}
+		.volunteer-wrap .volunteer-info .volunteer-form{ float: left; width: 637px; }
+		.volunteer-wrap .volunteer-info .volunteer-form .line{ margin-bottom: 14px;}
+		.volunteer-wrap .volunteer-info .volunteer-form .item{float: left; width: 308px; margin-right: 18px; position: relative; font-size: 12px; font-family: " Songti"; color: #231815;line-height: 40px;}
+		.volunteer-wrap .volunteer-info .volunteer-form .item span{position: absolute; left: 10px; top: 0;}
+		.volunteer-wrap .volunteer-info .volunteer-form .item input{width: 100%;line-height: 40px; background: #ededef; text-indent: 40px;font-family: " Songti";}
+		.volunteer-wrap .volunteer-info .volunteer-form .item:last-child{ margin-right: 0;}
+		.volunteer-wrap .volunteer-info .volunteer-form .line:nth-child(2) input{ text-indent: 65px;}
+		.volunteer-wrap .volunteer-info .volunteer-form .textarea{ position: relative; font-size: 12px;}
+		.volunteer-wrap .volunteer-info .volunteer-form .textarea span{position: absolute; line-height: 24px;  left: 10px; top: 0;}
+		.volunteer-wrap .volunteer-info .volunteer-form .textarea textarea{text-indent: 140px; background: #ededef; width: 637px;resize:none; height: 120px; line-height: 24px; box-sizing: border-box; padding: 0 10px; margin-bottom: 14px;}
+		.volunteer-wrap .volunteer-info .volunteer-form .submit{ width: 100%; line-height: 40px; background: #ededef; text-align: center; color: #323333; font-size: 14px;}
+		.contect-wrap{ width: 100%; min-width: 1160px;background: #32353e; color: #fff; text-align: center; padding: 88px 0 68px;}
+		.contect-wrap h3{font-size: 21px; }
+		.contect-wrap p{font-size: 12px; line-height: 18px; width: 500px; margin: 10px auto;}
+		.contect-wrap .form{ width: 510px;line-height: 40px;margin: 0 auto;}
+		.contect-wrap .form input{float: left; width: 430px;line-height: 40px; text-indent: 20px; font-size: 14px;}
+		.contect-wrap .form button{float: left; width: 78px;line-height: 40px;font-size: 14px; background: #6f7178; color: #fff;}
+		.contect-wrap ul{ margin: 20px auto; width: 200px;}
+		.contect-wrap ul li{display: table-cell; text-align: center;vertical-align: middle; width: 50px; }
+		.contect-wrap ul li img{ width: 25px; margin: 0 auto}
+		footer{ width: 100%;min-width: 1160px; background: #303039; color: #fff; font-size: 12px; font-family: 'Songti'; }
+		footer .footer{ width: 1160px; margin: 0 auto; padding-top: 20px; line-height: 40px;}
+		footer .footer p{ float: left; }
+		footer .footer a{ float: right; color: #fff; text-decoration: none;}
+	</style>
+</head>
+<body>
+<header class="clearfix">
+	<h1 class="clearfix"><img src="images/logo.png"><span>新世界</span></h1>
+	<a class="login" href=""><img src="images/user.png"><span>登录</span></a>
+	<ul class="nav clearfix">
+		<li class="active"><a href="#">首页</a></li>
+		<li><a href="#">最新活动</a></li>
+		<li><a href="#">项目介绍</a></li>
+		<li><a href="#">爱心社区</a></li>
+		<li><a href="#">关于我们</a></li>
+	</ul>
+</header>
+<section class="banner-wrap">
+	<img src="images/banner.png">
+	<div class="info">
+		<h2>Time of new life</h2>
+		<p>新时代，年轻的人们让我们一起 <br> 体验新生活，享受新生活</p>
+		<a href="" class="start">开始体验</a>
+	</div>
+</section>
+<section class="category-wrap clearfix">
+	<dl>
+		<dt><img src="images/icon01.png"></dt>
+		<dd>打造全新世界观，让你更爱你的生活</dd>
+	</dl>
+	<dl>
+		<dt><img src="images/icon02.png"></dt>
+		<dd>丰富多彩的公益活动，发挥新世界的主人公意识</dd>
+	</dl>
+	<dl>
+		<dt><img src="images/icon03.png"></dt>
+		<dd>时尚的新理念，超前体验未知的生活</dd>
+	</dl>
+	<dl>
+		<dt><img src="images/icon04.png"></dt>
+		<dd>完善的培养机制，培养你全新的世界观</dd>
+	</dl>
+</section>
+<section class="about-wrap">
+	<img src="images/logo02.png">
+	<p>关于新世界，你不知道的还有什么？</p>
+</section>
+<section class="search-wrap">
+	<img src="images/banner02.png">
+	<div class="search-mask">
+		<div class="search-form">
+			<h2>查找新世界城市活动信息</h2>
+			<p>每个城市的有不同的活动信息，请自主查询您所需要了解的城市</p>
+			<ul class="form clearfix">
+				<li class="form-item">
+					<input type="text" name="county" placeholder="中国" >
+					<ul class="items country dis">
+						<li class="selected"><span class="selected-img"></span>中国</li>
+						<li><span class="selected-img"></span>美国</li>
+					</ul>
+				</li>
+				<li class="form-item">
+					<input type="text" name="county" placeholder="省份" >
+					<ul class="items province">
+						<li class="selected"><span class="selected-img"></span>北京市</li>
+						<li><span class="selected-img"></span>天津市</li>
+						<li><span class="selected-img"></span>河北省</li>
+						<li><span class="selected-img"></span>陕西省</li>
+						<li><span class="selected-img"></span>内蒙古自治区</li>
+						<li><span class="selected-img"></span>辽宁省</li>
+					</ul>
+				</li>
+				<li class="form-item">
+					<input type="text" name="county" placeholder="城市" >
+					<ul class="items city dis">
+						<li class="selected"><span class="selected-img"></span>中国</li>
+						<li><span class="selected-img"></span>美国</li>
+					</ul>
+				</li>
+				<li class="form-item">
+					<button type="button" class="search-btn">搜索</button>
+				</li>
+			</ul> 
+		</div>
+	</div>
+</section>
+<section class="active-wrap">
+	<div class="active-items clearfix">
+		<dl class="item">
+			<dt>
+				<div class="title">
+					<h3>北京活动</h3>
+					<p>各社区大联盟</p>
+				</div>
+				<div class="img-wrap">
+					<img src="images/pic01.png">
+				</div>
+			</dt>
+			<dd>
+				<h3>北京活动</h3>
+				<p>各社区大联盟</p>
+			</dd>
+		</dl>
+		<dl class="item active">
+			<dt>
+				<div class="title">
+					<h3>上海活动</h3>
+					<p>夜上海新景观探索</p>
+				</div>
+				<div class="img-wrap">
+					<img src="images/pic02.png">
+				</div>
+			</dt>
+			<dd>
+				<h3>上海活动</h3>
+				<p>夜上海新景观探索</p>
+			</dd>
+		</dl>
+		<dl class="item">
+			<dt>
+				<div class="title">
+					<h3>深圳活动</h3>
+					<p>全新海岸线观点站</p>
+				</div>
+				<div class="img-wrap">
+					<img src="images/pic03.png">
+				</div>
+			</dt>
+			<dd>
+				<h3>深圳活动</h3>
+				<p>全新海岸线观点站</p>
+			</dd>
+		</dl>
+		<dl class="item">
+			<dt>
+				<div class="title">
+					<h3>香港活动</h3>
+					<p>奢侈消费大派送</p>
+				</div>
+				<div class="img-wrap">
+					<img src="images/pic04.png">
+				</div>
+			</dt>
+			<dd>
+				<h3>香港活动</h3>
+				<p>奢侈消费大派送</p>
+			</dd>
+		</dl>
+	</div>
+</section>
+<section class="new-world-wrap">
+	<ul class="img-wrap">
+		<li class="img-item">
+			<img src="images/banner03.png">
+			<div class="img-mask">
+				<h2>新世界</h2>
+				<h3>TIME</h3>
+				<p>@新世界-北京</p>
+				<p>2016.04.01</p>
+			</div>
+		</li>
+	</ul>
+	<div class="txt-wrap">
+		<ul>
+			<li>
+				<h2>新世界<i></i><span>01</span></h2>
+				<p>新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界新世界是个新世界</p>
+				<a href="" class="check-more">查看更多</a>
+			</li>
+		</ul>
+		<ol class="menu clearfix">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+		</ol>
+	</div>
+</section>
+<section class="new-world-wrap">
+	<ul class="new-world-wrap2 clearfix">
+		<li>
+			<h2>新时代<br>关于爱生活的我们</h2>
+			<a href="" class="see-more">查看更多</a>
+		</li>
+		<li>
+			<h2>新时代<br>关于爱生活的我们</h2>
+			<a href="" class="see-more">查看更多</a>
+		</li>
+		<li>
+			<img src="images/banner04.png">
+		</li>
+	</ul>
+</section>
+<section class="volunteer-wrap">
+	<div class="volunteer-title">
+		<h2>成为我们的志愿者</h2>
+		<p>新世界的大家庭需要每一个爱生活的人的加入，如果你够年轻，有梦想，有激情 <br>那就不要犹豫，快来加入我们，成为改变所有人生活的人 </p>
+	</div>
+	<div class="volunteer-info clearfix">
+		<ul class="volunteer-intro">
+			<li>
+				<h3>新世界志愿者协议</h3>
+				<p>加入新世界志愿者的人员必须遵守中华人民共共和国的相关法律法规，并且本着平等资源的原则 ......</p>
+				<a href="" class="see-more">more</a>
+			</li>
+			<li>
+				<h3>新世界志愿者权利</h3>
+				<p>新世界志愿者享受新世界内部所有资源共享的权利，并且享受所在四新世界活动的优先参与资格</p>
+				<a href="" class="see-more">more</a>
+			</li>
+			<li>
+				<h3>更多条款</h3>
+				<a href="" class="see-more">more</a>
+			</li>
+		</ul>
+		<div class="volunteer-form">
+			<div class="line clearfix">
+				<div class="item">
+					<span>姓名：</span><input type="text" name="name">
+				</div>
+				<div class="item">
+					<span>年龄：</span><input type="text" name="age">
+				</div>
+			</div>
+			<div class="line clearfix">
+				<div class="item">
+					<span>联系方式：</span><input type="text" name="phonenumber">
+				</div>
+				<div class="item">
+					<span>联系地址：</span><input type="text" name="address">
+				</div>
+			</div>
+			<div class="textarea">
+				<span>请简单描述您梦想的生活：</span>
+				<textarea name="desc"></textarea>
+			</div>
+			<button type="button" class="submit">提交申请</button>
+		</div>
+	</div>
+</section>
+<section class="contect-wrap">
+	<h3>联系我们</h3>
+	<p>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯也可以通过以下任何方式关注我们动态</p>
+	<div class="form clearfix">
+		<input type="text" name="email" placeholder="viiv_lgr@163.com">
+		<button type="button">提交</button>
+	</div>
+	<ul class="clearfix">
+		<li><a href=""><img src="images/icon05.png"></a></li>
+		<li><a href=""><img src="images/icon06.png"></a></li>
+		<li><a href=""><img src="images/icon07.png"></a></li>
+		<li><a href=""><img src="images/icon08.png"></a></li>
+	</ul>
+</section>
+<footer>
+	<div class="footer clearfix">
+		<p>&copy;2016新世界</p>
+		<a href="">Back to top</a>
+	</div>
+</footer>
+</body>
+</html>
