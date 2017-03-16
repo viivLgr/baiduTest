@@ -52,9 +52,11 @@
 		.bottom-wrap .right-wrap .mask h2 i{ color: #72b16a; letter-spacing: 1.4px; font-size: 12px;}
 		.bottom-wrap .right-wrap .content2{ width: 458px; margin-top: 20px; background: #eeedd6;}
 		.bottom-wrap .right-wrap .content2 ul{ padding: 20px; }
-		.bottom-wrap .right-wrap .content2 ul li{ color: #5a5a5a;text-align: left; font-family: 'Songti'; line-height: 20px;}
-		.bottom-wrap .right-wrap .content2 ul li span{ display: inline-block;border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid #10456b; margin-right: 5px;}
-		.bottom-wrap .right-wrap .content2 ul li i{ float: right;}
+		.bottom-wrap .right-wrap .content2 ul li{ color: #5a5a5a;text-align: left; font-family: 'Songti'; line-height: 30px; position: relative; margin-left: 10px; z-index: 1;}
+		.bottom-wrap .right-wrap .content2 ul li .sanjiao{content: '';position: absolute; left: -14px; top: 10px; display: inline-block;border-left: 5px solid transparent; border-right: 5px solid transparent; border-bottom: 10px solid #10456b; margin-right: 5px;}
+		.bottom-wrap .right-wrap .content2 ul li .tit{ float: left; background: #eeedd6; }
+		.bottom-wrap .right-wrap .content2 ul li .dotted{ width: 100%; position: absolute; left: 0; bottom: 8px; border-bottom: 2px dotted #5a5a5a;z-index: -1; }
+		.bottom-wrap .right-wrap .content2 ul li i{ float: right;background: #eeedd6;}
 		.bottom-wrap .right-wrap .content2 .red-wrap{}
 		.bottom-wrap .right-wrap .content2 .red-wrap .red{float: left; width: 250px;height: 80px; background: #d45d5c; color: #fff; padding: 40px 0 40px 10px;}
 		.bottom-wrap .right-wrap .content2 .red-wrap .red .tit{ float: left; font-size: 110px; font-weight: bold; border-right: 2px solid #fff; line-height: 86px; }
@@ -137,10 +139,42 @@
 		</div>
 		<div class="content2">
 			<ul>
-				<li><span></span>前端前端前端前端前端前端前端前端前端..............<i>前端</i></li>
-				<li><span></span>前端前端前端前端前端............................<i>前端</i></li>
-				<li><span></span>前端前端前端前端前端前端前端前端前端..............<i>前端</i></li>
+				<li class="clearfix">
+					<span class="sanjiao"></span>
+					<span class="tit">前端前端前端前端前端前端前端前端前端</span>
+					<i>前端</i>
+					<p class="dotted"></p>
+				</li>
+				<li class="clearfix">
+					<span class="sanjiao"></span>
+					<span class="tit">前端前端前端前端前端</span>
+					<i>前端</i>
+					<p class="dotted"></p>
+				</li>
+				<li class="clearfix">
+					<span class="sanjiao"></span>
+					<span class="tit">前端前端前端前端前端前端前端前端前端</span>
+					<i>前端</i>
+					<p class="dotted"></p>
+				</li>
 			</ul>
+			<!-- <table>
+				<tr>
+					<td>前端前端前端前端前端前端前端前端前端</td>
+					<td></td>
+					<td>前端</td>
+				</tr>
+				<tr>
+					<td>前端前端前端前端前端</td>
+					<td></td>
+					<td>前端</td>
+				</tr>
+				<tr>
+					<td>前端前端前端前端前端前端前端前端前端</td>
+					<td></td>
+					<td>前端</td>
+				</tr> -->
+			</table>
 			<div class="red-wrap clearfix">
 				<div class="red clearfix">
 					<div class="tit">0</div>
