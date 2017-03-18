@@ -1,0 +1,13 @@
+html,body,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dd,dt,input,button,textarea{margin: 0; padding: 0;}
+h1,h2,h3,h4,h5,h6{font-weight: normal;}
+body,h1,h2,h3,h4,h5,h6{font-size: 14px; font-family:  Helvetica, Tahoma, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei"; }
+ul,li,dl,dt,dd{list-style: none;}
+input,button,textarea{border: none;}
+input,button,select,textarea{outline:none}
+textarea{resize: none;}
+img{ width: 100%; display: block;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*+height:1%;}
+.dis{ display: none; }
+a{ text-decoration: none; }
+.iconfont{ font-weight: bold; }
