@@ -61,7 +61,8 @@ header .header .header-right .login{ font-size: 14px; color: #fff;}
 .date-wrap .calendar-wrap{float: left; height: 64px; width: 688px; overflow: hidden; position: relative;}
 .date-wrap .calendar{ width: 999999px; position: absolute; left: -1024px; top: 0; height: 64px;}
 .date-wrap .calendar li{ float: left; width: 110px; height: 64px; margin: 0 2px; border: 1px solid #ccc; background: #fff; text-align: center; padding: 10px 0; position: relative;}
-.date-wrap .calendar li.active:after{content: '';width: 100%; height: 3px; background: #4389c9; position: absolute; left: 0;top: 0; }
+.date-wrap .calendar li.active:after,
+.date-wrap .calendar li:hover:after{content: '';width: 100%; height: 3px; background: #4389c9; position: absolute; left: 0;top: 0; }
 .date-wrap .calendar li .time{font-size: 12px; color: #323333;}
 .date-wrap .calendar li .price{font-size: 21px; color: #ec6500;margin-top: 5px;}
 .date-wrap .calendar li .price span{font-size: 12px; color: #aaaaaa;}
@@ -123,9 +124,9 @@ header .header .header-right .login{ font-size: 14px; color: #fff;}
 .project-wrap .project .select-date-wrap .select-item .select-date-btn{ width: 100%; line-height: 20px; border: 1px solid #ccc; padding: 0 6px; background: #fff; cursor: pointer; }
 .project-wrap .project .calendar-table{ margin: 0px 20px;  text-align: center; border-collapse: collapse;}
 .project-wrap .project .calendar-table th{ border-top: 1px solid #a9cfec;width: 44px; border-bottom: 1px solid #e1e1e1; }
-.project-wrap .project .calendar-table td{ width: 44px; font-size: 12px; height: 50px; vertical-align: middle;}
-.project-wrap .project .calendar-table td.today,
-.project-wrap .project .calendar-table td:hover{ border: 1px solid #f5c732; }
+.project-wrap .project .calendar-table td{ width: 44px; font-size: 12px; height: 48px; vertical-align: middle; position: relative;}
+.project-wrap .project .calendar-table td.today:after,
+.project-wrap .project .calendar-table td:hover:after{content: ''; width: 100%; height: 100%; border: 1px solid #f5c732; position: absolute;left: 0;top: 0;}
 .project-wrap .project .calendar-table td .festival,
 .project-wrap .project .calendar-table td:nth-child(6) .num,
 .project-wrap .project .calendar-table td:nth-child(7) .num{ color: #c9161d; }
